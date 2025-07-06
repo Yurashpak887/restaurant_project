@@ -12,6 +12,7 @@ from .tasks import send_order_email
 class CustomUser(AbstractUser):
     pass
 
+
 class MenuItem(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
@@ -19,6 +20,7 @@ class MenuItem(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -33,4 +35,3 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order #{self.pk} by {self.user.username}"
-
