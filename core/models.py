@@ -4,9 +4,7 @@ from django.conf import settings
 from django.utils import timezone
 from datetime import timedelta
 from django.core.exceptions import ValidationError
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from .tasks import send_order_email
+
 
 
 class CustomUser(AbstractUser):

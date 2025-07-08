@@ -1,7 +1,6 @@
 from rest_framework import viewsets, permissions
 from .models import MenuItem, Order
 from .serializers import MenuItemSerializer, OrderSerializer
-from core.tasks import send_order_email
 
 
 class MenuItemViewSet(viewsets.ReadOnlyModelViewSet):
